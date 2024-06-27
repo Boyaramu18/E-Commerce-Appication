@@ -1,0 +1,664 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #5b7178;
+}
+
+nav ul {
+    display: flex;
+}
+
+.brand {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+nav ul li {
+    padding: 0 10px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    padding: 8px 15px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #E4FBFF;  
+}
+
+nav .btn i {
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
+}
+
+nav #click {
+    display: none;
+}
+
+.image1 {
+    margin-top: 15px;
+}
+
+#login {
+    background-color: #ff4500;
+    color: red;
+    font-weight: 800;
+    padding: 10px 10px;
+    margin-right: 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#cart-item_count {
+    position: absolute;
+    top: 9px;
+    right: 19.8%;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+@media screen and (max-width:1030px) {
+    #cart-item_count {
+        position: absolute;
+        top: 9px;
+        right: 18%;
+
+    }
+}
+
+@media screen and (max-width:960px) {
+    nav .btn i {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 85Px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #617e87;
+        display: block;
+        text-align: center;
+        transition: 0.6s ease;
+    }
+
+    nav ul li {
+        margin: 35px 0px;
+
+    }
+
+    #click:checked~ul {
+        left: 0%;
+    }
+
+    #click:checked~.btn i:before {
+        content: "\f00d";
+
+    }
+    #cart-item_count {
+        position: absolute;
+        top: 9px;
+        right: 40.5%;
+
+    }
+
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 180px;
+    right: -0px;
+    width: 50px;
+    font-size: 20px;
+    background-color: rgb(231, 231, 255);
+    color: black;
+    border: 0px;
+    border-radius: 100px;
+    cursor: pointer;
+
+}
+
+.right-arrow {
+    left: -400px;
+}
+
+@media screen and (max-width:200px) {
+    .right-arrow {
+        left: -2px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        position: absolute;
+        top: 10px;
+        right: -8px;
+        width: 5px;
+        font-size: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .right-arrow {
+        left: -2px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        position: absolute;
+        top: 90px;
+        right: 8px;
+        width: 15px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .right-arrow {
+        left: -2px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        position: absolute;
+        top: 45px;
+        right: 8px;
+        width: 50px;
+        font-size: 25px;
+    }
+}
+
+.first {
+    background-color: #dde9ec;
+    /* background-color: #ffd1d1; */
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.heading {
+    color: #ff6347;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+
+}
+
+.content-left {
+    animation: fadeInup 2s ease;
+}
+
+.content-left h2 {
+    font-style: 38px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content-left p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #666;
+    text-align: left;
+    padding: 0 20px;
+
+}
+
+.content-left button {
+    background-color: #ff4500;
+    color: #fff;
+    cursor: pointer;
+    /* display: inline-block; */
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    padding: 12px 20px;
+    transition: 0.3s ease;
+    margin-top: 10px;
+
+}
+
+.content-left button:hover {
+    background-color: rgb(136, 56, 212);
+    color: white;
+    transform: scale(1.1);
+}
+
+.content-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation: fadeInRight 2s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .heading h1 {
+        font-size: 45px;
+        margin-top: 30px;
+    }
+
+    .first {
+        margin: 0px;
+    }
+
+    .container {
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0 40px;
+    }
+
+    .content-left {
+        width: 100%;
+        margin: 35px 0px;
+    }
+
+    .content-left h2 {
+        font-size: 30px;
+    }
+
+    .content-left p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .content-left button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@keyframes fadeInup {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.heading {
+    text-align: center;
+    font-size: 50px;
+    padding: 2rem 0;
+}
+
+.featues .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+
+}
+
+.featues .box-container .box1 {
+    padding: 10px;
+    background-color:aquamarine ;
+    text-align: center;
+    /* box-shadow: ; */
+}
+
+.featues .box-container .box1 img {
+    margin: 1rem 0;
+    height: 15rem;
+}
+
+.box-container .box1 h3 {
+    font-size: 30px;
+    padding-bottom: 10px;
+
+}
+
+.box-container .box1 p {
+    font-size: 20px;
+    padding-bottom: 5px;
+    
+
+}
+
+.card {
+    width: 300px;
+    height: 400px auto;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    background-color: #dde9ec;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-left: 50px;
+    box-shadow: 0 2px 7px #151414;
+}
+
+.head {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff6347;
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+p {
+    text-align: center;
+    font-size: 23px;
+    line-height: 1.2;
+}
+
+.des {
+    text-align: center;
+    font-size: 20px;
+}
+
+.colo {
+    color: rgb(255, 225, 0);
+    font-weight: 900;
+}
+
+button {
+    background-color: #ff4500;
+    color: #fff;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 15px;
+    padding: 6px;
+    font-size: 17px;
+    margin-bottom: 30px;
+    border: none;
+    margin-left: 20%;
+    margin-top: 10px;
+}
+
+.card img {
+    width: 310px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+   
+}
+
+#product-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 30px;
+}
+
+.card {
+    width: 250px;
+
+}
+
+.card img {
+    width: 250px;
+    height: 200px;
+
+}
+
+@media screen and (max-width:270px) {
+    .card {
+
+        height: auto;
+        width: auto;
+    }
+}
+
+@media (max-width: 668px) {
+    .card {
+        margin: 50px;
+        height: auto;
+        width: 220px;
+    }
+
+    #product-container {
+        row-gap: 2px;
+    }
+
+    .card img {
+        width: 220px;
+        height: 200px;
+
+    }
+
+}
+
+.review .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+.review .box-container .box {
+
+    width: 310px;
+    height: 380px;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    padding: 30px;
+    border: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.review .box-container .box .stars {
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.review .box-container p {
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    padding-top: 30px;
+    text-align: center;
+
+
+}
+
+.review .box-container .box .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+
+}
+
+.review .box-container .box .user img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+
+}
+
+.review .box-container .box .user-info h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+@media screen and (max-width:768px) {
+    .review .box-container {
+
+        gap: 2rem;
+        margin-left: 50px;
+
+    }
+}
+
+
+.container_footer {
+    background-color: #5b7178;
+    width: 100%;
+    height: 65vh;
+    text-align: justify;
+    margin-top: 30px;
+}
+
+.float1 {
+    font-size: 20px;
+    width: 30%;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    line-height: 2;
+    color: #fff;
+}
+
+.food {
+    color: #000;
+}
+
+.float2 {
+    font-size: 20px;
+    width: 20%;
+    float: left;
+    margin: 10px;
+    line-height: 2;
+    padding: 10px;
+}
+
+.float2 a,
+.float3 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.float3 {
+    font-size: 20px;
+    width: 20%;
+    float: left;
+    margin: 10px;
+    line-height: 40px;
+    line-height: 2;
+    padding: 10px;
+}
+
+.float4 {
+    font-size: 20px;
+    width: 20%;
+    float: left;
+    margin: 10px;
+    line-height: 2;
+
+.float4 button {
+    background-color: #ff4500;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+input[type='text'] {
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 20px;
+    outline:navajowhite;
+    margin-left: 70px;
+}
+
+.right {
+    font: 15px;
+    float: right;
+
+}
+
+@media (max-width: 768px) {
+    .container_footer {
+        height: auto;
+    }
+
+    .float1,
+    .float2,
+    .float3,
+    .float4 {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    .float4 input[type='text'] {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .right {
+        float: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 990px) {
+    .float4 input[type='text'] {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .float4 .btns button {
+        width: 45%;
+        font-size: 15px;
+
+    }
+}
+
